@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task7</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Divisble Numbers Finder</h1>
+    <label>Range From :</label><input id="from" type="text" />
+    <label>Range To :</label><input id="to" type="text" />
+    <label>Divisible by :</label><input id="divisible" type="text" />
+    <input type="submit" onclick="divisible()" value="click" />
+    <p id="numbers"></p>
+    <script>
+      function divisible() {
+        // 3 different vairable declarations to choose the from,to,divisble ids
+        let from = document.getElementById("from").value;
+
+        let to = document.getElementById("to").value;
+
+        let divBy = document.getElementById("divisible").value;
+
+        let arr = []; // new empty array to store the output values
+        for (i = from; i <= to; i++) {
+          if (i % divBy == 0) {    // if remainder is 0 then push into the arr
+            arr.push(i);
+          }
+        }
+
+        document.getElementById("numbers").innerHTML = arr;
+      }
+    </script>
+  </body>
+</html>

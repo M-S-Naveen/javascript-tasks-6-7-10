@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>task6</title>
+    <style>
+        p {
+            display: inline-flex;
+        }
+        button {
+            height: 100px;
+            width: 200px;
+            background-color: #ff5566;
+            position: absolute;
+            left: 45%;
+            font-size: 20px;
+            color: aquamarine;
+         }
+         p {
+            font-size: 15px;
+            margin: 10px;
+            font-weight: bold;
+         }
+    </style>
+</head>
+
+<body>
+  
+    <p>Red =<p id="violet"></p></p><br>
+    <p>Blue =<p id="black"></p></p><br>
+    <p>Pink =<p id="pink"></p></p><br>
+    <p>Green =<p id="green"></p></p><br>
+    <p>Yellow =<p id="yellow"></p></p><br>
+    <p>Gray =<p id="gray"></p></p><br>
+    <p>Cyan =<p id="cyan"></p></p><br>
+    <p>Lightgreen =<p id="lightgreen"></p></p><br>
+    <p>lightblue =<p id="lightblue"></p></p><br>
+    <p>Violet =<p id="red"></p></p><br>
+    <p>Black =<p id="blue"></p></p><br>
+
+    <button type="button" onclick="myFunction()">Set background color</button>
+
+    <script>
+        let colors = ["violet", "black", "pink", "green", "yellow", "gray", "cyan", "lightgreen", "lightblue", "red", "blue"];
+        let arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];  //this array stores the count of how much times respective colors clicked
+        function myFunction() {
+            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)]; //Math.random gives random number between 1 to 10
+            let color = document.body.style.backgroundColor;
+            switch (color) {  //switch case gives less number of codes than if condition
+                case "red":
+                    arr[0] = arr[0] + 1;  // if violet is shown then first element in the array gets added +1 
+                    document.getElementById("violet").innerHTML = arr[0];
+                    break;   
+                case "blue":
+                    arr[1] = arr[1] + 1;
+                    document.getElementById("black").innerHTML = arr[1];
+                    break;  
+                case "pink":
+                    arr[2] = arr[2] + 1;
+                    document.getElementById("pink").innerHTML = arr[2];
+                    break;
+                case "green":
+                    arr[3] = arr[3] + 1;
+                    document.getElementById("green").innerHTML = arr[3];
+                    break;
+                case "yellow":
+                    arr[4] = arr[4] + 1;
+                    document.getElementById("yellow").innerHTML = arr[4];
+                    break;
+                case "gray":
+                    arr[5] = arr[5] + 1;
+                    document.getElementById("gray").innerHTML = arr[5];
+                    break;
+                case "cyan":
+                    arr[6] = arr[6] + 1;
+                    document.getElementById("cyan").innerHTML = arr[6];
+                    break;
+                case "lightgreen":
+                    arr[7] = arr[7] + 1;
+                    document.getElementById("lightgreen").innerHTML = arr[7];
+                    break;
+                case "lightblue":
+                    arr[8] = arr[8] + 1;
+                    document.getElementById("lightblue").innerHTML = arr[8];
+                    break;
+                case "violet":
+                    arr[9] = arr[9] + 1;
+                    document.getElementById("red").innerHTML = arr[9];
+                    break;
+                case "black":
+                    arr[10] = arr[10] + 1;
+                    document.getElementById("blue").innerHTML = arr[10];
+                    break;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

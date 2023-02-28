@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task10</title>
+    <style>
+        html {
+            background-color: rgb(179, 174, 174);
+        }
+      #container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            gap: 20px;
+        }
+        #a,#b,#c,#d {
+            border-radius: 5px;
+        }
+    </style>
+  </head>
+  <body>
+   <div id="container">
+    <div id="a" onclick="hide(this)" style="background: green"></div>
+    <div id="b" onclick="hide(this)" style="background: red"></div>
+    <div id="c" onclick="hide(this)" style="background: yellow"></div>
+    <div id="d" onclick="hide(this)" style="background: blue"></div>
+   </div>
+  </body>
+
+  <script>
+    function hide(elem) {
+      document.getElementById("a").style.background = "green";
+      document.getElementById("b").style.background = "red";  
+      document.getElementById("c").style.background = "yellow";
+      document.getElementById("d").style.background = "blue";
+      elem.style.background = "rgb(179, 174, 174)";  // when clicking the box color changes to rgb(179, 174, 174)
+    }
+  </script>
+</html>
